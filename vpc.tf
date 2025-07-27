@@ -10,11 +10,12 @@ module "labs-vpc" {
   public_subnets  = ["10.0.203.0/24", "10.0.206.0/24", "10.0.206.0/24"]
 
   single_nat_gateway = true
-  enable_vpn_gateway = true
+  enable_dns_support = true
+  enable_dns_hostnames = true
 
   tags = {
     Opentofu    = "true"
     Environment = "lab"
-    Version     = "1.0.0"
+    Version     = "1.1.0"
   }
 }
